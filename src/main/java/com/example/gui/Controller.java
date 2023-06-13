@@ -22,7 +22,10 @@ public class Controller {
     public Label lblPhone;
     public TextField textFileName;
 
-    //Add a friend to the list of friends
+    /**
+     * Add a friend to the list of friends
+     * @param actionEvent By clicking the Add Friend Button
+     */
     public void addFriend (ActionEvent actionEvent){
         String name = textGetName.getText();
         int age = Integer.parseInt(textGetAge.getText());
@@ -34,7 +37,11 @@ public class Controller {
         textGetPhone.clear();
     }
 
-    //Display the selected friend with his/her information
+
+    /**
+     * Display the selected friend with his/her information
+     * @param mouseEvent By selecting a friend in the friendList
+     */
     public void displayFriend(MouseEvent mouseEvent) {
         Friends temp;
         temp = (Friends) friendList.getSelectionModel().getSelectedItem();
@@ -43,7 +50,12 @@ public class Controller {
         lblPhone.setText(temp.getPhone());
     }
 
-    //Save the list of friends to a group and creating a txt file to store all the information
+
+    /**
+     * Save the list of friends to a group and creating a txt file to store all the information
+     * @param actionEvent By clicking the Save All Friend button
+     * @throws IOException
+     */
     public void saveFriend(ActionEvent actionEvent) throws IOException {
         ObservableList<Friends> list = friendList.getItems();
         String fileName = textFileName.getText();
@@ -60,7 +72,11 @@ public class Controller {
         friendList.getItems().clear();
     }
 
-    //Display all the friends in a group by reading the group's txt file
+    /**
+     * Display all the friends in a group by reading the group's txt file
+     * @param actionEvent By clicking the Load All Friends button
+     * @throws IOException
+     */
     public void loadFriend(ActionEvent actionEvent) throws IOException {
         friendList.getItems().clear();
         String fileName = textFileName.getText();
@@ -70,7 +86,10 @@ public class Controller {
         }
     }
 
-    //Clear all the friends in the list.
+    /**
+     * Clear all the friends in the list
+     * @param actionEvent By clicking the clear list button
+     */
     public void clearList(ActionEvent actionEvent) {
         friendList.getItems().clear();
     }
