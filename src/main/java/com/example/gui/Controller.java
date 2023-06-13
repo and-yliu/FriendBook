@@ -23,8 +23,7 @@ public class Controller {
     public TextField textFileName;
 
     /**
-     * Add a friend to the list of friends
-     * @param actionEvent By clicking the Add Friend Button
+     * Add a friend to the list of friends by clicking the Add Friend Button
      */
     public void addFriend (ActionEvent actionEvent){
         String name = textGetName.getText();
@@ -39,8 +38,7 @@ public class Controller {
 
 
     /**
-     * Display the selected friend with his/her information
-     * @param mouseEvent By selecting a friend in the friendList
+     * Display the selected friend with his/her information by selecting a friend in the friendList
      */
     public void displayFriend(MouseEvent mouseEvent) {
         Friends temp;
@@ -52,8 +50,7 @@ public class Controller {
 
 
     /**
-     * Save the list of friends to a group and creating a txt file to store all the information
-     * @param actionEvent By clicking the Save All Friend button
+     * Save the list of friends to a group and creating a txt file to store all the information by clicking the Save All Friend button
      * @throws IOException
      */
     public void saveFriend(ActionEvent actionEvent) throws IOException {
@@ -73,8 +70,7 @@ public class Controller {
     }
 
     /**
-     * Display all the friends in a group by reading the group's txt file
-     * @param actionEvent By clicking the Load All Friends button
+     * Display all the friends in a group by reading the group's txt file by clicking the Load All Friends button
      * @throws IOException
      */
     public void loadFriend(ActionEvent actionEvent) throws IOException {
@@ -87,8 +83,7 @@ public class Controller {
     }
 
     /**
-     * Clear all the friends in the list
-     * @param actionEvent By clicking the clear list button
+     * Clear all the friends in the list by clicking the clear list button
      */
     public void clearList(ActionEvent actionEvent) {
         friendList.getItems().clear();
